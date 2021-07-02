@@ -1,0 +1,36 @@
+.select-container {
+    background-color: rgb(167, 162, 162);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+select:focus{ 
+    outline: none;
+}
+
+.Link, .buscar-txt {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: rgba(0,0,0,.5);
+}
+
+.Link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(43, 41, 41, 0.5);
+}
+
+@media only screen and (max-width:990px) {
+
+    #basic-navbar-nav {
+        text-align: right;
+    }
+
+    .cart-button {
+        margin-right: 1rem;
+    }
+}
