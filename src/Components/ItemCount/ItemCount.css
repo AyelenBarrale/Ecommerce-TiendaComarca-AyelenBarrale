@@ -1,0 +1,31 @@
+.buttons-container {
+    margin: 0 auto;
+    margin-top: auto;
+}
+
+.buttons-block, .añadirCart-btn {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1rem;
+}
+
+.item-button {
+    background-Color: #c59940;
+    color: #ffffff;
+    padding: 0.2rem 0.7rem;
+    outline: none;
+    border: transparent; 
+    border-radius: 3px;
+}
+
+.item-button:hover {
+    background-color: #7a602a;
+}
+
+.cantidad-num {
+    margin-bottom: 0;
+    font-size: 20px; 
+    padding: 0 0.5rem;
+}

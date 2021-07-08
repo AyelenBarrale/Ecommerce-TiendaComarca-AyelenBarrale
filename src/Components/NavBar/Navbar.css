@@ -24,6 +24,24 @@ select:focus{
     color: rgba(43, 41, 41, 0.5);
 }
 
+.cart-button {
+    background-color: rgb(167, 162, 162); 
+    color: #ffffff;
+    outline: 0; 
+    border: none;
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem;
+}
+
+.cart-button:hover  {
+    background-color: rgb(109, 105, 105);
+}
+
+#contadorCarrito {
+    padding-right: 0.2rem;
+}
+
+
 @media only screen and (max-width:990px) {
 
     #basic-navbar-nav {

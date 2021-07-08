@@ -7,7 +7,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 //BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 
 
@@ -36,7 +36,10 @@ const NavBar = ({item1, item2, item3, subitem1, subitem2, subitem3, subitem4, su
                     <Link to="/talleres" className="Link"> {item2} </Link>
                     <Link to="/nosotros" className="Link"> {item3} </Link>
                 </Nav>
-                <Button id="cart-button" className="cart-button" style={{backgroundColor:"#c59534", outline:"0", border: "none"}}><i className="fas fa-shopping-cart"></i></Button>
+                <Link to="/cart">
+                    <button id="cart-button" className="cart-button"><i className="fas fa-shopping-cart"></i></button>
+                </Link>
+                {/* <button id="cart-button" className="cart-button"><span id="contadorCarrito">0</span><i className="fas fa-shopping-cart"></i></button> */}
             </Navbar.Collapse>
         </Navbar>
     );
