@@ -3,6 +3,7 @@ import ItemCount from './../../Components/ItemCount/ItemCount';
 import './../ItemDetail/ItemDetail.css';
 
 import { useCartContext } from './../../Contexts/CartContext';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({product}) => {
 
@@ -21,6 +22,9 @@ const ItemDetail = ({product}) => {
                 <div className="container-btnsDetail">
                     {product.stock > 0 && <ItemCount onAdd={onAdd} stock={product.stock} /> }
                     {product.stock <= 0 && <p className="noStock">SIN STOCK</p> }
+                    <Link to="/cart">
+                        {cart.length !== 0 && <button className="detail-buy" >Finalizar Compra</button>}
+                    </Link>
                 </div>
             </div>
         </div>

@@ -25,26 +25,6 @@ const CartProvider = ({ children }) => {
         }
     };
 
-
-    
-    /* const itemEliminar = id => cart.find( item => item.id === id); 
-
-    const removeItem = (item) => {
-        if(itemEliminar(item.id)) {
-            const indice = cart.indexOf(itemEliminar);
-            cart.splice(indice, 1);
-        }
-    }; */
-
-    /* const removeItem = (id) => {
-        for(let i = 0; i < cart.length; i += 1) {
-            if (cart[i].id === id) {
-                cart.splice(i, 1)
-                return
-            }
-        }
-    } */
-
     let reduceCart = cart.reduce((acc, el) => acc += (el.precio * el.quantity), 0)
 
     return (
