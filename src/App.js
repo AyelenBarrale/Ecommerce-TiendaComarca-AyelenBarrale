@@ -1,10 +1,12 @@
-import React from 'react';
+import React/* , { useState, useEffect }  */from 'react';
 import './App.css';
 
 import CartProvider from './Contexts/CartContext';
 
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+
+/* import { db } from './firebase'; */
 
 
 //REACT ROUTER DOM
@@ -19,8 +21,44 @@ import Talleres from './views/Talleres/Talleres';
 import Nosotros from './views/Nosotros/Nosotros';
 import Cart from './Components/Cart/Cart';
 
-class App extends React.Component {
-  render() {
+const App = () => {
+
+    /* const [productos, setProducto] = useState([]);
+    const getProductos = () => {
+      const docs = []
+      db.collection('productos').onSnapshot((querySnapshot) => {
+        querySnapshot.forEach(doc => {
+          docs.push({...doc.data(), id: doc.id })
+          console.log(docs)
+        });
+        //setProductos(docs);
+      });
+    }
+
+    useEffect(() => {
+      getProductos();
+    }) */
+
+    ////////////// TRAER ITEM ESPECÍFICO
+
+    /* 
+    const getProducto = () => {
+      const docs = [];
+      db.collection('productos').onSnapshot((querySnapshot) => {
+        querySnapshot.forEach(doc => {
+          docs.push({...doc.data(), id: doc.id })
+          let filteredItems = docs.filter((itemFiltered) => itemFiltered.id === 'id');
+          console.log(filteredItems)
+          setProductos(filtereditems);
+        });
+      });
+    };
+
+    useEffect(() => {
+      getProducto();
+    }
+    */
+
     return (
       <CartProvider>
         <Router>
@@ -58,7 +96,7 @@ class App extends React.Component {
         </Router>
       </CartProvider>
     );
-  };
+
 };
 
 export default App;

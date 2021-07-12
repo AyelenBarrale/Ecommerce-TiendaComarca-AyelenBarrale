@@ -10,7 +10,7 @@ const ItemDetail = ({product}) => {
     const { cart, addToCart } = useCartContext();
     
     const onAdd = (qty) => addToCart(product, qty);
-    console.log(cart)
+    //console.log(cart)
     
     return (
         <div className="item-container" key={product.id}>

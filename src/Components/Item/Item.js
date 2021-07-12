@@ -26,9 +26,9 @@ const Item = ({product}) => {
                     <Card.Title> {product.nombre} </Card.Title>
                     <Card.Text> Precio: $ {product.precio} </Card.Text>
                     <div className="container-btnsDetail">
-                    {product.stock > 0 && <ItemCount onAdd={onAdd} stock={product.stock} /> }
-                    {product.stock <= 0 && <p className="noStock">SIN STOCK</p> }
-                </div>
+                        {product.stock > 0 && <ItemCount onAdd={onAdd} stock={product.stock} /> }
+                        {product.stock <= 0 && <p className="noStock">SIN STOCK</p> }
+                    </div>
                 </Card.Body>
             </Card>
         </div>

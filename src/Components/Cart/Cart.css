@@ -1,6 +1,17 @@
 .cart-box {
     margin: 5%;
 }
+.cart-empty-box {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    align-items: center;
+
+}
+
+.cart-empty-title {
+    padding-bottom: 1rem;
+}
 
 .cart-container {
     display: flex;
@@ -58,4 +69,12 @@
 
 .total-text {
     margin: 1rem 0;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.oculto {
+    display: none;
 }
