@@ -29,12 +29,17 @@ const CartProvider = ({ children }) => {
         setCart(updateCart);
     }
 
+    const realStock = item => {
+        const foundItem = cart.find(el => el.id === item.id);
+        return foundItem ? item.stock - foundItem.quantity : item.stock;
+    }
+
     let reduceCart = cart.reduce((acc, el) => acc += (el.precio * el.quantity), 0)
 
     let reduceQuantity = cart.reduce((acc, el) => acc += (el.quantity), 0)
 
     return (
-        <CartContext.Provider value={{cart, setCart, clearCart, addToCart, reduceCart, removeItem, reduceQuantity }} >
+        <CartContext.Provider value={{cart, setCart, clearCart, addToCart, reduceCart, removeItem, reduceQuantity, realStock }} >
             { children }
         </CartContext.Provider>
     )

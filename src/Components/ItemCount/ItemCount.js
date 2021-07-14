@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './../ItemCount/ItemCount.css';
+import { useCartContext } from './../../Contexts/CartContext';
 
+const ItemCount = ({ onAdd, product }) => {
 
-const ItemCount = ({ stock, onAdd }) => {
-
+    const { realStock } = useCartContext();
+    const stock = realStock(product);
     const [toAdd, setToAdd] = useState(stock ? 1 : 0);
 
     return (

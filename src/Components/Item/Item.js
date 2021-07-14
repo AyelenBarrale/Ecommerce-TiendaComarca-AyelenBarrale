@@ -12,9 +12,10 @@ import { Card } from 'react-bootstrap';
 
 const Item = ({product}) => {
 
-    const { addToCart } = useCartContext();
+    const { addToCart, realStock } = useCartContext();
     
     const onAdd = (qty) => addToCart(product, qty);
+    const stock = realStock(product);
 
     return (
         <div>
@@ -26,8 +27,12 @@ const Item = ({product}) => {
                     <Card.Title> {product.nombre} </Card.Title>
                     <Card.Text> Precio: $ {product.precio} </Card.Text>
                     <div className="container-btnsDetail">
-                        {product.stock > 0 && <ItemCount onAdd={onAdd} stock={product.stock} /> }
-                        {product.stock <= 0 && <p className="noStock">SIN STOCK</p> }
+                        {stock > 0 ?
+                            <>
+                            <p>Stock: {stock} </p>
+                            <ItemCount onAdd={onAdd} product={product}/>
+                            </> : <p className="noStock">SIN STOCK</p>
+                        }
                     </div>
                 </Card.Body>
             </Card>
