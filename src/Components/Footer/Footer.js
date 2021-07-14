@@ -15,11 +15,11 @@ const Footer = () => {
             <div className="footer-right">
                 <div className="footer-right-1">
                     <p className="txt-footer right">Seguinos en </p>
-                    <a href="https://www.instagram.com/comarcadecreadores/" target="_blank"><i className="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/comarcadecreadores/" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
                 </div>
                 <div className="footer-right-2">
                     <p className="txt-footer right">Contactanos </p>
-                    <a href="https://api.whatsapp.com/send?phone=543515430203" target="_blank"><i className="fab fa-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=543515430203" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
                 </div>
                 
             </div>

@@ -18,6 +18,7 @@ h2 {
 .espacio-img {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 3rem;
 }
 
 .img-item {

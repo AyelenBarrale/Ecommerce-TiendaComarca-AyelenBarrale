@@ -39,7 +39,7 @@ const App = () => {
               subitem4={"Emprendedores"}
             />
           </div>
-
+          
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/categoria/:categoryName">
