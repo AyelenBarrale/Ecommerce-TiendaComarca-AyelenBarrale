@@ -1,0 +1,18 @@
+.talleres-container {
+    margin: 3rem 7rem;
+}
+
+.talleres-txt {
+    text-align: left;
+}
+
+.talleres-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.talleres-img {
+    margin-top: 0.5rem;
+    width: 33%;
+}

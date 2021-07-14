@@ -39,10 +39,6 @@ const NavBar = ({item1, item2, item3, subitem1, subitem2, subitem3, subitem4, su
                     <Link to="/nosotros" className="Link"> {item3} </Link>
                 </Nav>
                 <CartWidget />
-                {/* <Link to="/cart">
-                    <button id="cart-button" className="cart-button"><i className="fas fa-shopping-cart"></i></button>
-                </Link> */}
-                {/* <button id="cart-button" className="cart-button"><span id="contadorCarrito">0</span><i className="fas fa-shopping-cart"></i></button> */}
             </Navbar.Collapse>
         </Navbar>
     );

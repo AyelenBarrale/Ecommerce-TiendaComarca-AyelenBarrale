@@ -1,4 +1,5 @@
-.nosotros-container {
+.page-nosotros-container {
+    display: flex;
     margin: 3rem 7rem;
 }
 
@@ -8,4 +9,17 @@ h2 {
 
 .nosotros-txt {
     text-align: left;
+}
+
+.fundadores-img {
+    margin: 4rem 0 4rem 2rem;
+}
+
+.espacio-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-item {
+    width: 33%;
 }

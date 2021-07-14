@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // COMPONENTS
 import NavBar from './Components/NavBar/Navbar';
+import Footer from './Components/Footer/Footer';
 
 // VISTAS
 import Home from './views/Home/Home'
@@ -22,42 +23,6 @@ import Nosotros from './views/Nosotros/Nosotros';
 import Cart from './Components/Cart/Cart';
 
 const App = () => {
-
-    /* const [productos, setProducto] = useState([]);
-    const getProductos = () => {
-      const docs = []
-      db.collection('productos').onSnapshot((querySnapshot) => {
-        querySnapshot.forEach(doc => {
-          docs.push({...doc.data(), id: doc.id })
-          console.log(docs)
-        });
-        //setProductos(docs);
-      });
-    }
-
-    useEffect(() => {
-      getProductos();
-    }) */
-
-    ////////////// TRAER ITEM ESPECÍFICO
-
-    /* 
-    const getProducto = () => {
-      const docs = [];
-      db.collection('productos').onSnapshot((querySnapshot) => {
-        querySnapshot.forEach(doc => {
-          docs.push({...doc.data(), id: doc.id })
-          let filteredItems = docs.filter((itemFiltered) => itemFiltered.id === 'id');
-          console.log(filteredItems)
-          setProductos(filtereditems);
-        });
-      });
-    };
-
-    useEffect(() => {
-      getProducto();
-    }
-    */
 
     return (
       <CartProvider>
@@ -93,6 +58,9 @@ const App = () => {
             </Route>
           </Switch>
           
+          <div className="main-container">
+            <Footer />
+          </div>
         </Router>
       </CartProvider>
     );
