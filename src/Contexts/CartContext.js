@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 export const CartContext = createContext({});
 export const useCartContext = () => useContext(CartContext);
@@ -6,6 +6,7 @@ export const useCartContext = () => useContext(CartContext);
 const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
+    const [productsInCart, setProductsInCart] = useState(0);
 
     const clearCart = () => setCart([]);
 
@@ -38,8 +39,22 @@ const CartProvider = ({ children }) => {
 
     let reduceQuantity = cart.reduce((acc, el) => acc += (el.quantity), 0)
 
+    useEffect(() => {
+        const localCart = localStorage.getItem("cart");
+        if(!localCart) localStorage.setItem("cart", JSON.stringify([]));
+        else setCart(JSON.parse(localCart));
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        const inCart = cart.reduce((acc, item) => {
+            return acc + item.quantity;
+        }, 0);
+        setProductsInCart(inCart);
+    }, [cart]);
+
     return (
-        <CartContext.Provider value={{cart, setCart, clearCart, addToCart, reduceCart, removeItem, reduceQuantity, realStock }} >
+        <CartContext.Provider value={{cart, productsInCart, setCart, clearCart, addToCart, reduceCart, removeItem, reduceQuantity, realStock }} >
             { children }
         </CartContext.Provider>
     )
