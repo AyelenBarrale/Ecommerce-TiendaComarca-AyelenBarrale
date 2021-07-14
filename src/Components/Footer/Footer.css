@@ -1,0 +1,55 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+.footer-container{
+    padding: 0.5rem 0;
+    background-color: rgb(204, 197, 197);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: center;
+
+}
+
+.fa, .fab, .fal, .far, .fas {
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    color: rgba(43, 41, 41, 0.5);
+    cursor: pointer;
+}
+
+.txt-footer {
+    text-align: center;
+    padding: 0.2rem 0 0 0;
+    color: rgba(43, 41, 41, 0.5);
+    font-size: 0.8rem;
+}
+
+
+
+.footer-right {
+    justify-content: right;
+}
+
+.right {
+    padding-right: 0.5rem;
+}
+
+.footer-right-1 {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-right-2 {
+    display: flex;
+    justify-content: center;
+}

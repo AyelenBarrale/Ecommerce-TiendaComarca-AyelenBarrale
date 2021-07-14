@@ -58,7 +58,7 @@ const App = () => {
             </Route>
           </Switch>
           
-          <div className="main-container">
+          <div>
             <Footer />
           </div>
         </Router>
