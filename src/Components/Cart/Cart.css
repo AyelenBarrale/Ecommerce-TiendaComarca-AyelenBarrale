@@ -40,6 +40,8 @@
 
 .buy:hover {
     background-color: rgb(10, 175, 10);
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .empty {
