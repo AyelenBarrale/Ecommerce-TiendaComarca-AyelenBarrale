@@ -1,27 +1,26 @@
-/* eslint-disable max-len */
-import React, {createContext, useState, useContext, useEffect} from 'react';
+import React, { createContext, useState, useContext/* , useEffect */ } from "react";
 
 export const CartContext = createContext({});
 export const useCartContext = () => useContext(CartContext);
 
-const CartProvider = ({children}) => {
+const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [productsInCart, setProductsInCart] = useState(0);
 
   const clearCart = () => setCart([]);
 
-  const isInCart = (id) => cart.some((item) =>item.id === id);
+  const isInCart = (id) => cart.some((item) => item.id === id);
 
   const addToCart = (item, quantity) => {
     if (isInCart(item.id)) {
       const newCart = cart.map((cartItem) => {
         if (cartItem.id === item.id) {
-          return {...cartItem, quantity: cartItem.quantity + quantity};
+          return { ...cartItem, quantity: cartItem.quantity + quantity };
         } else return cartItem;
       });
       setCart(newCart);
     } else {
-      setCart((prev) => [...prev, {...item, quantity}]);
+      setCart((prev) => [...prev, { ...item, quantity }]);
     }
   };
 
@@ -35,27 +34,42 @@ const CartProvider = ({children}) => {
     return foundItem ? item.stock - foundItem.quantity : item.stock;
   };
 
-  const reduceCart = cart.reduce((acc, el) => acc += (el.precio * el.quantity), 0);
+  const reduceCart = cart.reduce(
+    (acc, el) => (acc += el.precio * el.quantity),
+    0
+  );
 
-  const reduceQuantity = cart.reduce((acc, el) => acc += (el.quantity), 0);
+  const reduceQuantity = cart.reduce((acc, el) => (acc += el.quantity), 0);
 
-  useEffect(() => {
-    const localCart = localStorage.getItem('cart');
-    if (!localCart) localStorage.setItem('cart', JSON.stringify([]));
+  /* useEffect(() => {
+    const localCart = localStorage.getItem("cart");
+    if (!localCart) localStorage.setItem("cart", JSON.stringify([]));
     else setCart(JSON.parse(localCart));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     const inCart = cart.reduce((acc, item) => {
       return acc + item.quantity;
     }, 0);
     setProductsInCart(inCart);
-  }, [cart]);
+  }, [cart]); */
 
   return (
-    <CartContext.Provider value={{cart, productsInCart, setCart, clearCart, addToCart, reduceCart, removeItem, reduceQuantity, realStock}} >
-      { children }
+    <CartContext.Provider
+      value={{
+        cart,
+        productsInCart,
+        setCart,
+        clearCart,
+        addToCart,
+        reduceCart,
+        removeItem,
+        reduceQuantity,
+        realStock,
+      }}
+    >
+      {children}
     </CartContext.Provider>
   );
 };
