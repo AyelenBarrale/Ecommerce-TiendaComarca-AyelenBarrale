@@ -16,7 +16,7 @@ const OrdersProvider = ({ children }) => {
   const [pasos, setPasos] = useState(paso);
 
   const clear = () => clearCart();
-  console.log(cart);
+
   const itemsCart = cart.map((cartItem) => {
     return {
       id: cartItem.id,
@@ -41,7 +41,6 @@ const OrdersProvider = ({ children }) => {
       })
       .then((docRef) => {
         keyId = docRef.id;
-        console.log(keyId);
         updateStock();
         clear();
         setPasos(3);
@@ -62,7 +61,9 @@ const OrdersProvider = ({ children }) => {
   };
 
   return (
-    <OrdersContext.Provider value={{ addOrden, keyId, addOrdenInfo, pasos, setPasos }}>
+    <OrdersContext.Provider
+      value={{ addOrden, keyId, addOrdenInfo, pasos, setPasos }}
+    >
       {children}
     </OrdersContext.Provider>
   );

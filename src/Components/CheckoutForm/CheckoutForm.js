@@ -3,8 +3,6 @@ import "../CheckoutForm/CheckoutForm.css";
 
 import { useOrdersContext } from "../../Contexts/OrdersContext";
 
-import { Link } from "react-router-dom";
-
 const CheckoutForm = () => {
   const { addOrdenInfo } = useOrdersContext();
 
@@ -23,7 +21,6 @@ const CheckoutForm = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log(values);
     addOrdenInfo(values);
     setValues({ ...initialState });
   };

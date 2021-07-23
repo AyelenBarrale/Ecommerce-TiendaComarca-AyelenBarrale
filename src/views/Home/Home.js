@@ -1,6 +1,5 @@
-/* eslint-disable max-len */
-import React from 'react';
-import ItemListContainer from '../../Components/ItemListContainer/ItemListContainer';
+import React from "react";
+import ItemListContainer from "../../Components/ItemListContainer/ItemListContainer";
 
 const Home = () => {
   return (

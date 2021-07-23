@@ -3,7 +3,6 @@ import "../CheckoutForm/CheckoutForm.css";
 import { useCartContext } from "../../Contexts/CartContext";
 import { useOrdersContext } from "../../Contexts/OrdersContext";
 
-
 const CheckOutConfirm = () => {
   const { cart, reduceCart } = useCartContext();
   const { addOrden } = useOrdersContext();
@@ -25,9 +24,9 @@ const CheckOutConfirm = () => {
       </div>
       <h4>Total a pagar: ${reduceCart} </h4>
       <div className='form-container'>
-          <button className='form-button' onClick={addOrden}>
-            Confirmar compra
-          </button>
+        <button className='form-button' onClick={addOrden}>
+          Confirmar compra
+        </button>
       </div>
     </div>
   );

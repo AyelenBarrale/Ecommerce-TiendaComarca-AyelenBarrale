@@ -1,19 +1,19 @@
 /* import axios from 'axios';  */
-import React, {useState, useEffect} from 'react';
-import ItemDetail from './../../views/ItemDetail/ItemDetail';
-import './../ItemDetailContainer/ItemDetailContainer.css';
+import React, { useState, useEffect } from "react";
+import ItemDetail from "./../../views/ItemDetail/ItemDetail";
+import "./../ItemDetailContainer/ItemDetailContainer.css";
 
-import {db} from '../../firebase';
+import { db } from "../../firebase";
 
-import {useParams} from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
 
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    const Producto = db.collection('productos').doc(id);
+    const Producto = db.collection("productos").doc(id);
     Producto.get().then((doc) => {
       if (doc.exists) {
         setItem(doc.data());
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <div className="itemDetail-container">
+    <div className='itemDetail-container'>
       <ItemDetail product={item} />
     </div>
   );

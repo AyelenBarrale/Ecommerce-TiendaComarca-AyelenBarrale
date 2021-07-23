@@ -50,14 +50,13 @@ const NavBar = ({
             <option value='artistica'>{subitem1} </option>
             <option value='libreria'>{subitem2} </option>
             <option value='merceria'>{subitem3} </option>
+            <option value='emprendedores'>{subitem4} </option>
           </select>
           <Link to='/talleres' className='Link'>
-            {" "}
-            {item2}{" "}
+            {item2}
           </Link>
           <Link to='/nosotros' className='Link'>
-            {" "}
-            {item3}{" "}
+            {item3}
           </Link>
         </Nav>
         <CartWidget />

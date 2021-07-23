@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../Contexts/CartContext";
@@ -24,8 +23,6 @@ const Cart = () => {
       </div>
     );
   }
-
-  console.log(cart);
 
   return (
     <div className='cart-box'>

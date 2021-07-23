@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-import React /* , { useState, useEffect }  */ from "react";
+import React from "react";
 import "./App.css";
 
 import CartProvider from "./Contexts/CartContext";
@@ -7,8 +6,6 @@ import OrdersProvider from "./Contexts/OrdersContext";
 
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
-
-/* import { db } from './firebase'; */
 
 // REACT ROUTER DOM
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
