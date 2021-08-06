@@ -1,3 +1,8 @@
+
+# Muestra de funcionamiento final: 
+![entrega-final-barrale-ayelen-muestra](https://user-images.githubusercontent.com/79757893/128564132-f1fbd737-85c1-49ba-ba95-6592cdc9c838.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
