@@ -5,7 +5,6 @@ import ItemCount from "./../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../Contexts/CartContext";
 
-// BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 

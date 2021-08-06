@@ -11,16 +11,16 @@ function ItemListContainer() {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    db.collection("productos").onSnapshot((querySnapshot) => {
-      const docs = [];
-      querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-      if (!categoryName) return setItems(docs);
-      if (categoryName === "all") return setItems(docs);
-      const catItems = docs.filter((item) => item.categoria === categoryName);
-      setItems(catItems);
-    });
+    (async () => {
+      let resp;
+      categoryName === undefined || categoryName === "all"
+        ? (resp = await db.collection("productos").get())
+        : (resp = await db
+            .collection("productos")
+            .where("categoria", "==", categoryName)
+            .get());
+      setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })));
+    })();
   }, [categoryName]);
 
   return (

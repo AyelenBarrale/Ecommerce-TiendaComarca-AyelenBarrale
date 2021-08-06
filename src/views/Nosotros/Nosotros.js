@@ -16,7 +16,7 @@ const Nosotros = () => {
             estrategicamente en Barrio General Paz, donde comercializamos
             elementos para la creación.
           </p>
-          <p className='nosotros-txt'>
+          <p className='nosotros-txt txt-mobile'>
             Creamos un mix entre una artística, mercería y taller de
             capacitaciones, par que cada persona que ingrese pueda encontrar
             todo lo que necesita para su proyecto de reciclaje, restauración o
@@ -25,17 +25,17 @@ const Nosotros = () => {
             momento y contamos con modalidad de talleres libres, guiados por un
             emprendedor especialista en el tema.
           </p>
-          <p className='nosotros-txt'>
+          <p className='nosotros-txt txt-mobile'>
             Tenemos una amplia red de proveedores que nos permiten brindarte
             precio y calidad, sin necesidad de que te desplaces a la zona
             céntrica de Córdoba para encontrar aquello que buscás.
           </p>
-          <p className='nosotros-txt'>
+          <p className='nosotros-txt txt-mobile'>
             Además, contamos con toda la maquinaria necesaria para un pequeño
             taller de producción textil, y puedas utilizar este espacio para
             producir.
           </p>
-          <p className='nosotros-txt'>
+          <p className='nosotros-txt txt-mobile'>
             También, ofrecemos a artísticas y creadores un punto de venta donde
             pueden exhibir sus creaciones y comercializar las mismas, a través
             de la modalidad de consignación.

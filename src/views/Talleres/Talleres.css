@@ -1,19 +1,31 @@
 .talleres-container {
-    margin: 3rem 7rem;
+  margin: 3rem 7rem;
 }
 
 .talleres-txt {
-    text-align: left;
+  text-align: left;
 }
 
 .talleres-img-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3rem;
 }
 
 .talleres-img {
+  margin-top: 0.5rem;
+  width: 33%;
+}
+
+@media only screen and (max-width: 900px) {
+  .talleres-img-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .talleres-img {
     margin-top: 0.5rem;
-    width: 33%;
+    width: 100%;
+  }
 }

@@ -7,14 +7,11 @@ import OrdersProvider from "./Contexts/OrdersContext";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
-// REACT ROUTER DOM
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// COMPONENTS
 import NavBar from "./Components/NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
 
-// VISTAS
 import Home from "./views/Home/Home";
 import Talleres from "./views/Talleres/Talleres";
 import Nosotros from "./views/Nosotros/Nosotros";

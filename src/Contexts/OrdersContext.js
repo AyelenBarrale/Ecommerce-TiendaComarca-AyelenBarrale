@@ -7,13 +7,14 @@ import { db } from "../firebase";
 import firebase from "firebase/app";
 import { useCartContext } from "../Contexts/CartContext";
 
-let keyId;
-let buyerInfo;
 const OrdersProvider = ({ children }) => {
   const { cart, clearCart, reduceCart } = useCartContext();
 
   let paso = 1;
   const [pasos, setPasos] = useState(paso);
+
+  const [keyId, setKeyId] = useState(0);
+  const [buyerInfo, setBuyerInfo] = useState({});
 
   const clear = () => clearCart();
 
@@ -27,7 +28,7 @@ const OrdersProvider = ({ children }) => {
   });
 
   const addOrdenInfo = (values) => {
-    buyerInfo = values;
+    setBuyerInfo(values);
     setPasos(2);
   };
 
@@ -40,7 +41,7 @@ const OrdersProvider = ({ children }) => {
         total: reduceCart,
       })
       .then((docRef) => {
-        keyId = docRef.id;
+        setKeyId(docRef.id);
         updateStock();
         clear();
         setPasos(3);

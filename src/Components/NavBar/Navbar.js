@@ -4,10 +4,8 @@ import "./Navbar.css";
 
 import CartWidget from "../Cart/CartWidget";
 
-// LINKS
 import { Link, useHistory } from "react-router-dom";
 
-// BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 
